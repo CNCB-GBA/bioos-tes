@@ -269,7 +269,41 @@ components:
           default: 0
           minimum: -1e6
           maximum: 1e6
-          
+        IEStype:
+          description: |-
+            **Ongoing** With this statement, the platform will automatically handle the necessary adaptation tasks to initiate a specific IDE environment, eliminating the need for users to manually specify any other tags.
+          type: string
+          default: JupyterLab
+          enum:
+            - custom
+            - JupyterLab
+            - Coming soon
+        IESexpose:
+          description: |-
+            `Ongoing` Only works if the interactive parameter is set to true and the IEStype is set to custom.<br>
+            Ports exposed by interactive tasks
+          type: array
+          items:
+            type: integer
+          example: [8080]
+        IESentrypoint:
+          type: array
+          description: |-
+            `Ongoing` Only works if the interactive parameter is set to true and the IEStype is set to custom.<br>
+            The command used to start the WEB IDE tool, which needs to be pre-installed in the image.
+          items:
+            type: string
+          example: 
+            ["start-notebook.sh","--NotebookApp.token=''",
+            "--ip","0.0.0.0",
+            "--NotebookApp.allow_origin=http://example.cn",
+            "--NotebookApp.base_url=/jupyter",
+            "--NotebookApp.tornado_settings=..."]
+        IESurl:
+          type: string
+          description: |-
+            `Ongoing` Only works if the interactive parameter is set to true and the IEStype is set to custom.<br>Service uri exposed by IES tool.
+          example: "http://example.cn/lab"
         
     tesCancelTaskResponse:
       type: object
