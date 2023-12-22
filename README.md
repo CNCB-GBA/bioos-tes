@@ -6,5 +6,4 @@ Based on the TES standard defined by GA4GH, Guangzhou Lab and Volcano Engine hav
 
 Serving as the backend computing service for the Miracle Cloud project, this TES implementation has undergone extensive testing to ensure its functionality and reliability.
 
-
-See the human-readable and the [OpenAPI YAML description](openapi/bioos-tes.yaml). You can also explore the specification in the [Swagger Editor](https://editor.swagger.io/?url=https://LLZ-Group.github.io/bioos-tes/openapi/bioos-tes.yaml).
+See the human-readable and the [OpenAPI YAML description](openapi/bioos-tes.yaml). You can also explore the specification in the [Swagger Editor](https://editor.swagger.io/?url=https://CNCB-GBA.github.io/bioos-tes/openapi/bioos-tes.yaml).
